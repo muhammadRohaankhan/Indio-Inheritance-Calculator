@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from core.models import EstateInput, EstateDistribution
-from states import REGISTRY
-from core.tree import Person
+from backend.core.models import EstateInput, EstateDistribution
+from backend.states import REGISTRY
+from backend.core.tree import Person
 
 router = APIRouter()
 

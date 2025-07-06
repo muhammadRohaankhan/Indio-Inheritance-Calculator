@@ -1,9 +1,17 @@
+<<<<<<< HEAD:tests/test_calculators.py
 import sys, os; sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import datetime
 from core.enums import State
 from core.models import EstateInput, PersonIn
 from states import REGISTRY
 from api.routes import _build_person
+=======
+import datetime
+from backend.core.enums import State
+from backend.core.models import EstateInput, PersonIn
+from backend.states import REGISTRY
+from backend.api.routes import _build_person
+>>>>>>> feature-estate-laws:backend/tests/test_calculators.py
 import pytest
 
 
@@ -68,6 +76,10 @@ def test_predeceased_child_per_stirpes():
     assert result.get("G1") == 250.0
     assert result.get("G2") == 250.0
 
+<<<<<<< HEAD:tests/test_calculators.py
+=======
+
+>>>>>>> feature-estate-laws:backend/tests/test_calculators.py
 def test_texas_children_from_previous_marriage():
     data = EstateInput(
         state=State.TX,
@@ -109,4 +121,8 @@ def test_texas_no_prior_children():
     result = calc.calculate(data)
     assert result.get("Spouse") == pytest.approx(533.33, rel=1e-2)
     assert result.get("C1") == pytest.approx(233.33, rel=1e-2)
+<<<<<<< HEAD:tests/test_calculators.py
     assert result.get("C2") == pytest.approx(233.33, rel=1e-2)
+=======
+    assert result.get("C2") == pytest.approx(233.33, rel=1e-2)
+>>>>>>> feature-estate-laws:backend/tests/test_calculators.py

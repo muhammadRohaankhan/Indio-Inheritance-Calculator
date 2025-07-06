@@ -1,4 +1,4 @@
-from core.enums import State
+from backend.core.enums import State
 from pydantic import BaseModel, Field, validator
 from datetime import date
 from typing import List, Optional, Dict
