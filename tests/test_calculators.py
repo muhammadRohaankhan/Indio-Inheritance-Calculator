@@ -68,7 +68,6 @@ def test_predeceased_child_per_stirpes():
     assert result.get("G1") == 250.0
     assert result.get("G2") == 250.0
 
-
 def test_texas_children_from_previous_marriage():
     data = EstateInput(
         state=State.TX,
