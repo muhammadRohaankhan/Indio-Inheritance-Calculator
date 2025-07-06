@@ -1,10 +1,5 @@
-<<<<<<< HEAD:states/illinois.py
-from core.calculator_base import BaseInheritanceCalculator
-from core.models import EstateInput
-=======
 from backend.core.calculator_base import BaseInheritanceCalculator
 from backend.core.models import EstateInput
->>>>>>> feature-estate-laws:backend/states/illinois.py
 
 class IllinoisCalculator(BaseInheritanceCalculator):
     def spouse_share(self, data: EstateInput):
