@@ -1,0 +1,51 @@
+{
+  "state": "TX",
+  "date_of_death": "2024-01-01",
+  "has_will": false,
+  "total_estate": 10000000,
+  "spouse_exists": false,
+  "community_estate": 5000000,
+  "children": [
+    {
+      "name": "Son1",
+      "is_alive": true,
+      "children": [
+        {"name": "Son1_Child", "is_alive": true, "children": []}
+      ]
+    },
+    {
+      "name": "Son2",
+      "is_alive": true,
+      "children": [
+        {"name": "Son2_Child", "is_alive": true, "children": []}
+      ]
+    },
+    {
+      "name": "Daughter1",
+      "is_alive": true,
+      "children": [
+        {"name": "Daughter1_Child1", "is_alive": true, "children": []},
+        {"name": "Daughter1_Child2", "is_alive": true, "children": []},
+        {"name": "Daughter1_Child3", "is_alive": true, "children": []}
+      ]
+    },
+    {
+      "name": "Daughter2",
+      "is_alive": false,
+      "children": [
+        {"name": "Daughter2_Child1", "is_alive": true, "children": []},
+        {"name": "Daughter2_Child2", "is_alive": true, "children": []}
+      ]
+    },
+    {
+      "name": "Daughter3",
+      "is_alive": false,
+      "children": [
+        {"name": "Daughter3_Child1", "is_alive": true, "children": []},
+        {"name": "Daughter3_Child2", "is_alive": true, "children": []}
+      ]
+    }
+  ],
+  "parents_alive": false,
+  "siblings_alive": false
+}
