@@ -14,32 +14,16 @@ The calculator determines how an estate is split among surviving spouses and des
 ## Installation
 
 1. Ensure you have **Python 3.11+** installed.
-<<<<<<< HEAD
-2. Create a virtual environment and install dependencies:
-=======
 2. Create a virtual environment and install backend dependencies:
->>>>>>> feature-estate-laws
 
 ```bash
 python -m venv venv
 source venv/bin/activate
-<<<<<<< HEAD
-=======
 cd backend
->>>>>>> feature-estate-laws
 pip install -r requirements.txt
-```
 
 ## Running the API
 
-<<<<<<< HEAD
-Start the FastAPI server with **uvicorn**:
-
-```bash
-uvicorn app:app --reload
-```
-
-=======
 Start the FastAPI server with **uvicorn** from the `backend` package:
 
 ```bash
@@ -53,7 +37,6 @@ FastAPI serves the `frontend` directory so the root URL shows the HTML form.
 It submits the required fields to the `/calculate` endpoint and displays the
 resulting distribution.
 
->>>>>>> feature-estate-laws
 The `/calculate` endpoint accepts a JSON body matching the `EstateInput` model and returns each heir's share of the estate.
 
 ## Example Scenario
