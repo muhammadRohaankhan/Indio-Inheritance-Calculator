@@ -21,6 +21,7 @@ python -m venv venv
 source venv/bin/activate
 cd backend
 pip install -r requirements.txt
+```
 
 ## Running the API
 
