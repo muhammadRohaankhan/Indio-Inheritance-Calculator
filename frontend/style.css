@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container-box {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#calc-form .btn-primary {
+    width: 100%;
+}
+
+#result {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}

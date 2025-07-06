@@ -1,4 +1,4 @@
-from core.tree import Person
+from backend.core.tree import Person
 from typing import List, Dict, Tuple
 
 class BaseInheritanceCalculator:

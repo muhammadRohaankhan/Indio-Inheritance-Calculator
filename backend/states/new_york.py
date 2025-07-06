@@ -1,5 +1,5 @@
-from core.calculator_base import BaseInheritanceCalculator
-from core.models import EstateInput
+from backend.core.calculator_base import BaseInheritanceCalculator
+from backend.core.models import EstateInput
 
 
 class NewYorkCalculator(BaseInheritanceCalculator):
