@@ -45,6 +45,7 @@ A truncated request might look like:
   "has_will": false,
   "total_estate": 1000000,
   "spouse_exists": false,
+  "children_from_previous_marriage": false,
   "community_estate": 500000,
   "children": [
     {"name": "Child1", "is_alive": false, "children": [ {"name": "G1", "is_alive": true, "children": []} ]},

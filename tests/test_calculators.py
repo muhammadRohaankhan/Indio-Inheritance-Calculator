@@ -4,6 +4,7 @@ from core.enums import State
 from core.models import EstateInput, PersonIn
 from states import REGISTRY
 from api.routes import _build_person
+import pytest
 
 
 def test_calculators_basic():
@@ -66,3 +67,46 @@ def test_predeceased_child_per_stirpes():
     assert result.get("Child2") == 500.0
     assert result.get("G1") == 250.0
     assert result.get("G2") == 250.0
+
+def test_texas_children_from_previous_marriage():
+    data = EstateInput(
+        state=State.TX,
+        date_of_death=datetime.date(2024, 1, 1),
+        total_estate=1000.0,
+        spouse_exists=True,
+        community_estate=600.0,
+        children_from_previous_marriage=True,
+        children=[
+            PersonIn(name="C1", is_alive=True, children=[]),
+            PersonIn(name="C2", is_alive=True, children=[]),
+        ],
+    )
+    calc = REGISTRY[State.TX]
+    children = [_build_person(c) for c in data.children]
+    data.children = children
+    result = calc.calculate(data)
+    assert result.get("Spouse") == pytest.approx(333.33, rel=1e-2)
+    assert result.get("C1") == pytest.approx(333.33, rel=1e-2)
+    assert result.get("C2") == pytest.approx(333.33, rel=1e-2)
+
+
+def test_texas_no_prior_children():
+    data = EstateInput(
+        state=State.TX,
+        date_of_death=datetime.date(2024, 1, 1),
+        total_estate=1000.0,
+        spouse_exists=True,
+        community_estate=600.0,
+        children_from_previous_marriage=False,
+        children=[
+            PersonIn(name="C1", is_alive=True, children=[]),
+            PersonIn(name="C2", is_alive=True, children=[]),
+        ],
+    )
+    calc = REGISTRY[State.TX]
+    children = [_build_person(c) for c in data.children]
+    data.children = children
+    result = calc.calculate(data)
+    assert result.get("Spouse") == pytest.approx(533.33, rel=1e-2)
+    assert result.get("C1") == pytest.approx(233.33, rel=1e-2)
+    assert result.get("C2") == pytest.approx(233.33, rel=1e-2)

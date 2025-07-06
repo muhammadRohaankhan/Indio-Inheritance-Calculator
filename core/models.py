@@ -23,6 +23,8 @@ class EstateInput(BaseModel):
 
     # spouse
     spouse_exists: bool = False
+    # indicates the decedent has children not with the surviving spouse
+    children_from_previous_marriage: bool = False
     # property breakdown (community vs separate)
     community_estate: Optional[float] = None  # if None, assume all separate
 

@@ -37,6 +37,7 @@ The minimal front-end should present a form that mirrors the key data in `Estate
 3. **Valid Will?** – if `Yes`, the API simply returns the estate to the beneficiaries listed in the will.
 4. **Family Information** – checkboxes / counts:
    - Surviving spouse?
+   - Any children from a previous marriage?
    - Number of children (each child can be marked as stepchild, adopted, or predeceased with descendants).
    - Parents alive? / Siblings alive?
 5. **Asset Information (optional)** – total estate value and any community-property portion (used by TX and CA).
