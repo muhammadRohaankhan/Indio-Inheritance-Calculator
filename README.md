@@ -33,9 +33,10 @@ uvicorn backend.app:app --reload
 
 ## Frontend
 
-Open `frontend/index.html` in your browser after the API is running. The page
-provides a simple form that submits the required fields to the `/calculate`
-endpoint and displays the resulting distribution.
+With the server running, navigate to `http://localhost:8000/` in your browser.
+FastAPI serves the `frontend` directory so the root URL shows the HTML form.
+It submits the required fields to the `/calculate` endpoint and displays the
+resulting distribution.
 
 The `/calculate` endpoint accepts a JSON body matching the `EstateInput` model and returns each heir's share of the estate.
 

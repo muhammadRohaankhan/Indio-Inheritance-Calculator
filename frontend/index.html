@@ -75,7 +75,7 @@ form.addEventListener('submit', async (e) => {
         parents_alive: false,
         siblings_alive: false
     };
-    const res = await fetch('http://localhost:8000/calculate', {
+    const res = await fetch('/calculate', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(payload)
